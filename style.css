@@ -1,0 +1,129 @@
+//francesco inizio css home page
+:root {
+    --bg-color: #0d1117;
+    --card-bg: rgba(22, 27, 34, 0.8);
+    --accent-color: #58a6ff;
+    --text-main: #ffffff;
+    --text-dim: #8b949e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+--::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #58a6ff;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none; 
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+    
+}
+
+.cursor.expand {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(88, 166, 255, 0.2);
+    border-color: #58a6ff;
+}
+
+
+header {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #30363d;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+}
+
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid #30363d;
+    border-radius: 15px;
+    padding: 40px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(88, 166, 255, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #30363d;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+}
+
+////francesco fine css home page
