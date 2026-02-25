@@ -10,23 +10,33 @@
 
 <body class="contact-page-body">
     <div class="cursor"></div>
-    <div class="contact-page-box">
-        <h2 class="contact-page-title">Contattaci</h2>
-        <form class="contact-page-form" action="">
-            <label class="contact-page-label" for="name">Nome:</label>
-            <input class="contact-page-input" type="text" id="name" name="name" maxlength="20" placeholder="Mario">
+    <nav class="contact-page-navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="galleria.html">Galleria</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+    <div class="contact-page-main">
+        <div class="contact-page-box">
+            <h2 class="contact-page-title">Contattaci</h2>
+            <form class="contact-page-form" action="">
+                <label class="contact-page-label" for="name">Nome:</label>
+                <input class="contact-page-input" type="text" id="name" name="name" maxlength="20" placeholder="Mario">
 
-            <label class="contact-page-label" for="surname">Cognome:</label>
-            <input class="contact-page-input" type="text" name="surname" id="surname" maxlength="20"
-                placeholder="Rossi">
+                <label class="contact-page-label" for="surname">Cognome:</label>
+                <input class="contact-page-input" type="text" name="surname" id="surname" maxlength="20"
+                    placeholder="Rossi">
 
-            <label class="contact-page-label" for="email">Email:</label>
-            <input class="contact-page-input" type="email" name="email" id="email" maxlength="100"
-                placeholder="mario.rossi@gmail.com">
+                <label class="contact-page-label" for="email">Email:</label>
+                <input class="contact-page-input" type="email" name="email" id="email" maxlength="100"
+                    placeholder="mario.rossi@gmail.com">
 
-            <input class="contact-page-submit" type="submit" value="Invia">
-        </form>
+                <input class="contact-page-submit" type="submit" value="Invia">
+            </form>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

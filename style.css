@@ -200,11 +200,18 @@ nav a:hover {
 /* PAGINA CONTATTI */
 
 .contact-page-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Impila verticalmente la nav e il contenuto */
+    overflow: hidden;
+}
+
+.contact-page-main {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: var(--bg-color); /* Coerente con la home */
+    background-color: var(--bg-color);
 }
 
 .contact-page-box {
@@ -266,4 +273,13 @@ nav a:hover {
     cursor: none;
 }
 
+.contact-page-navbar {
+    background: var(--card-bg);
+    padding: 1.3rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #30363d;
+    flex-shrink: 0;
+}
 /* PAGINA CONTATTI */
