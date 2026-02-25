@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo | Il Nostro Team</title>
+    <style>
+        /* Reset e Stili Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Barra di Navigazione */
+        nav {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: #fff;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+
+        /* Sezione Team */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* Mantiene le proporzioni delle foto */
+            background-color: #ddd;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="galleria.html">Galleria</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Incontra il Nostro Team</h1>
+        <p>Le persone che rendono tutto questo possibile.</p>
+    </header>
+
+    <main class="container">
+        
+        <div class="card">
+            <img src="https://via.placeholder.com/300x350" alt="Foto di Alessio">
+            <div class="card-content">
+                <h3>Alessio Mondini</h3>
+                <p><strong>L'"importunista"</strong></p>
+                <p>Le centraliniste lo temono, ma non sanno come farlo smettere.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x350" alt="Foto di Ludovico">
+            <div class="card-content">
+                <h3>Ludovico Gardenal</h3>
+                <p><strong>Il Kakato</strong></p>
+                <p>Leggendarie le sue geste, imodium e lasagne sono i suoi migliori amici</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x350" alt="Foto di Daniele">
+            <div class="card-content">
+                <h3>Daniele Sandre</h3>
+                <p><strong>L'"aiutino"</strong></p>
+                <p>"Non si molla un cazzo" il suo motto da una vita. Sfida gli eccessi e li batte sempre. Imbattibile.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x350" alt="Foto di Francesco">
+            <div class="card-content">
+                <h3>Francesco Bottan</h3>
+                <p><strong>Il "commercialista"</strong></p>
+                <p>Neanche tempo di incrociare lo sguardo che ti ha gia comprato.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; 2026 PadelTeam. Tutti i diritti riservati.
+    </footer>
+
+</body>
+</html>
