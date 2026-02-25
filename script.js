@@ -1,6 +1,6 @@
 const cursor = document.querySelector('.cursor');
 const links = document.querySelectorAll('.card, a');
-
+const contactsButton = document.querySelector('.contact-page-submit');
 
 document.addEventListener('mousemove', (e) => {
 
@@ -19,6 +19,15 @@ links.forEach(link => {
     link.addEventListener('mouseleave', () => {
         cursor.classList.remove('expand');
     });
+});
+
+// PER CONTATTI
+contactsButton.addEventListener('mouseenter', () => {
+    cursor.classList.add('expand');
+});
+
+contactsButton.addEventListener('mouseleave', () => {
+    cursor.classList.remove('expand');
 });
 
 document.addEventListener('mouseenter', () => {
