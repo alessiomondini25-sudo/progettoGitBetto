@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto GIT-HUB</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="cursor"></div>
+
+    <header>
+        <h1>Progetto di utilizzo GIT-HUB</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Collaborazione Senza Confini</h2>
+            <p>Esplora il potere del versioning e del lavoro di squadra. GitHub non è solo un repository, è il cuore pulsante del nostro sviluppo collettivo.</p>
+        </section>
+
+        <section class="grid-container">
+            <a href="chi-siamo.html" class="card">
+                <div class="card-content">
+                    <h3>Chi Siamo</h3>
+                    <p>Scopri il team dietro il codice e la nostra visione.</p>
+                </div>
+            </a>
+            <a href="avventure.html" class="card">
+                <div class="card-content">
+                    <h3>Avventure</h3>
+                    <p>Il log delle sfide affrontate e dei bug sconfitti.</p>
+                </div>
+            </a>
+            <a href="contatti.html" class="card">
+                <div class="card-content">
+                    <h3>Contatti</h3>
+                    <p>Hai domande? Connettiti con noi per collaborare.</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Progetto Scolastico - Realizzato con passione e Git.</p>
+    </footer>
+
+    <script>
+        
+        const cursor = document.querySelector('.cursor');
+        const links = document.querySelectorAll('.card, a');
+
+
+        document.addEventListener('mousemove', (e) => {
+    
+        const x = e.clientX;
+        const y = e.clientY;
+    
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+        });
+
+
+        links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+        cursor.classList.add('expand');
+        });
+        link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('expand');
+        });
+        });
+
+        document.addEventListener('mouseenter', () => {
+        cursor.style.opacity = "1";
+        });
+        document.addEventListener('mouseleave', () => {
+        cursor.style.opacity = "0";
+        });
+
+    </script>
+</body>
+</html>
