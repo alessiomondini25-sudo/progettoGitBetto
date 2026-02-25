@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contattaci</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="form-box">
-        <h2>Contattaci</h2>
-        <form action="">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" max="20" placeholder="Mario">
-            <label for="surname">Cognome:</label>
-            <input type="text" name="surname" id="surname" max="20" placeholder="Rossi">
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email" max="100" placeholder="mario.rossi@gmail.com">
-            <input type="submit" value="invia">
+
+<body class="contact-page-body">
+    <div class="cursor"></div>
+    <div class="contact-page-box">
+        <h2 class="contact-page-title">Contattaci</h2>
+        <form class="contact-page-form" action="">
+            <label class="contact-page-label" for="name">Nome:</label>
+            <input class="contact-page-input" type="text" id="name" name="name" maxlength="20" placeholder="Mario">
+
+            <label class="contact-page-label" for="surname">Cognome:</label>
+            <input class="contact-page-input" type="text" name="surname" id="surname" maxlength="20"
+                placeholder="Rossi">
+
+            <label class="contact-page-label" for="email">Email:</label>
+            <input class="contact-page-input" type="email" name="email" id="email" maxlength="100"
+                placeholder="mario.rossi@gmail.com">
+
+            <input class="contact-page-submit" type="submit" value="Invia">
         </form>
     </div>
+    <script>
+
+        const cursor = document.querySelector('.cursor');
+        const links = document.querySelectorAll('.card, a');
+
+
+        document.addEventListener('mousemove', (e) => {
+
+            const x = e.clientX;
+            const y = e.clientY;
+
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+        });
+
+
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('expand');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('expand');
+            });
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = "1";
+        });
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = "0";
+        });
+
+    </script>
 </body>
 </html>
